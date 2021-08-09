@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: Generar usuario
+      user:
+        home: /home/app
+        name: app
+        password: 123456
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/app_rsa
