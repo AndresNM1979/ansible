@@ -4,11 +4,16 @@
     - name: Install apache2
       apt:
         name: apache2
+<<<<<<< HEAD
         state: present
         update_cache: yes
       become: true
     - name: Start apache2
       service:
+=======
+    - name: Start apache2
+      service: 
+>>>>>>> upstream/main
         name: apache2
         state: started
     - name: Install index.html
@@ -17,4 +22,8 @@
         dest: /var/www/html/index.html
         owner: www-data
         group: www-data
+<<<<<<< HEAD
         mode: '0644'
+=======
+        mode: '0644'
+>>>>>>> upstream/main

@@ -25,4 +25,8 @@
       authorized_key:
         user: app
         state: present
+<<<<<<< HEAD
         key: "{{ lookup('file', 'app.pub') }}"
+=======
+        key: "{{ lookup('file', 'app.pub') }}"
+>>>>>>> upstream/main

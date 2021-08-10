@@ -3,7 +3,13 @@
   tasks:
     - name: Install MariaDB
       apt:
+<<<<<<< HEAD
          name: mariadb-server
          state: present
          update_cache: yes
+=======
+        name: mariadb-server
+        state: present
+        update_cache: yes
+>>>>>>> upstream/main
       become: true

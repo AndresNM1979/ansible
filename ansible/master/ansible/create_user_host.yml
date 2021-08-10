@@ -3,12 +3,22 @@
   become: True
   remote_user: viewadmin
   become_method: sudo
+<<<<<<< HEAD
   become_user: rott
+=======
+  become_user: root
+  vars:
+    ansible_become_password: "***sudo password here***"
+>>>>>>> upstream/main
   tasks:
     #    - name: Generate key
     #  openssh_keypair:
     #    path: app
+<<<<<<< HEAD
     - name: Create userc
+=======
+    - name: Create user
+>>>>>>> upstream/main
       user:
         name: app
         home: /home/app
@@ -29,4 +39,8 @@
       authorized_key:
         user: app
         state: present
+<<<<<<< HEAD
         key: "{{ lookup('file', 'app.pub') }}"
+=======
+        key: "{{ lookup('file', 'app.pub') }}"
+>>>>>>> upstream/main
